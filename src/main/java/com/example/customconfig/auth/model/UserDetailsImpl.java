@@ -1,5 +1,6 @@
-package com.example.customconfig.auth;
+package com.example.customconfig.auth.model;
 
+import com.example.customconfig.auth.entity.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

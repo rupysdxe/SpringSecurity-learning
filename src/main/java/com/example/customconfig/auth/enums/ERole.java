@@ -1,4 +1,4 @@
-package com.example.customconfig.auth;
+package com.example.customconfig.auth.enums;
 
 public enum ERole {
     ROLE_USER,

@@ -1,4 +1,4 @@
-package com.example.customconfig.auth;
+package com.example.customconfig.auth.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
@@ -10,16 +10,16 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
+@Table(name = "users")
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true, nullable = false)
     private String username;
     @JsonIgnore
-    @Column(nullable = false)
     private String password;
-
     @OneToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
 
